@@ -87,7 +87,7 @@ public class ProductServiceImpl implements ProductService {
                 "\n" +
                 "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
         springCoreUltimate.setPrice(new BigDecimal("199"));
-        springCoreUltimate.setImageUrl("kotek3.jpg");
+        springCoreUltimate.setImageUrl("kotek3.jpeg");
         springCoreUltimate.getProductCategories().add(springCoreCat);
         springCoreUltimate.getProductCategories().add(springBootCat);
         productMap.put(2, springCoreUltimate);
@@ -150,7 +150,7 @@ public class ProductServiceImpl implements ProductService {
                 "\n" +
                 "You will learn what Dependency Injection is, and how Spring uses Inversion of Control to leverage Dependency Injection. Next in my course, I will walk you step by step through building your very first Spring Framework application. I'll show you hot to use the Spring Initializer and Spring Boot to jumpstart your Spring Framework project. Ideally, you can follow along and create your own Spring project. I know it can be frustrating to follow along in a course and run into errors. So don't worry, I have the complete source code examples in Git for you to checkout and use.");
         springCoreDevOps.setPrice(new BigDecimal("199"));
-        springCoreDevOps.setImageUrl("kotek7.jpg");
+        springCoreDevOps.setImageUrl("kotek7.jpeg");
         springCoreDevOps.getProductCategories().add(springCoreCat);
         springCoreDevOps.getProductCategories().add(springBootCat);
         productMap.put(6, springCoreDevOps);
