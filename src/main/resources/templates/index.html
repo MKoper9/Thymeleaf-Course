@@ -146,11 +146,22 @@
         </div>
     </div>
 
-    <div class="row course-list list">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.courseName}"></td>
+        </tr>
+    </table>
+
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a href="product.html">
+                    <a href="product.html" th:href="@{/product/1}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -188,7 +199,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/4}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -226,7 +237,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/5}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -261,13 +272,13 @@
                 </div>
             </div>
         </div>
-    </div>
+
 
     <div class="row">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/6}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -306,7 +317,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/2}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -329,6 +340,16 @@
                             5 Course Bundle
                         </div>
                     </div>
+                    <div class="col-xs-8">
+                        <img align="left" alt="Kulfonik"
+                             src="../static/images/kulfon.png"
+                             th:src="@{images/kulfon.png}"
+                             class="img-circle"/>
+                        <div class="small course-author-name">
+                            Kulfonik
+                        </div>
+
+                    </div>
                     <div class="col-xs-4">
                         <div class="small course-price">
                             $147
@@ -340,7 +361,7 @@
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
-                    <a data-role="course-box-link" href="product.html">
+                    <a data-role="course-box-link" href="product.html" th:href="@{/product/3}">
                         <div class="col-lg-12">
                             <div class="course-box-image-container">
                                 <img role="presentation"
@@ -377,6 +398,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 <div class="container" th:replace="fragments/footer::footer">
     <p>footer</p>
