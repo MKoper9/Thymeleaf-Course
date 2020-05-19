@@ -148,7 +148,7 @@
         <div class="col-md-6">
             <div class="col-md-12">
             <img src="../static/images/kotek2.jpg"
-                 th:src="@{'/images/'+${product.imageUrl}"th:width="350" th:height="300"
+                 th:src="@{'/images/'+${product.imageUrl}}"
                  class="center-block"/>
             </div>
         </div>
@@ -168,6 +168,14 @@
                     $PRICE
                 </div>
             </div>
+        </div>
+        <div class="row col-xs-12">
+            <ol class="breadcrumb">
+                <li th:each="productCat : ${product.productCategories}">
+                    <a href="#" th:text="${productCat.category}">Cat 1</a> </li>
+                <li th:remove="all"><a href="#">Cat 2</a> </li>
+                <li th:remove="all"><a href="#">Cat 3</a> </li>
+            </ol>
         </div>
 
     </div>
