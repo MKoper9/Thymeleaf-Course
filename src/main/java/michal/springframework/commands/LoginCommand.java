@@ -1,6 +1,6 @@
 package michal.springframework.commands;
 
-import javax.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class LoginCommand {
 
