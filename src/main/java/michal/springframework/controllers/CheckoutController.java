@@ -4,8 +4,8 @@ import michal.springframework.commands.CheckoutCommand;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
 
@@ -20,7 +20,7 @@ public class CheckoutController {
         return "checkoutform";
     }
 
-    @PostMapping("docheckout")
+    @RequestMapping(value = "/docheckout", method = RequestMethod.POST)
     public String doCheckout(@Valid CheckoutCommand checkoutCommand, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){

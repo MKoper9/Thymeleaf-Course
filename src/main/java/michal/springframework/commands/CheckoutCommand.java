@@ -1,6 +1,7 @@
 package michal.springframework.commands;
 
-import javax.validation.constraints.NotEmpty;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.validation.constraints.Size;
 
 public class CheckoutCommand {
