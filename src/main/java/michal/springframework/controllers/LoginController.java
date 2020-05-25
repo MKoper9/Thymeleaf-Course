@@ -21,13 +21,19 @@ public class LoginController {
         return "loginform";
     }
 
-    @PostMapping("/dologin")
+    @RequestMapping("logout-success")
+    public String yourLoggedOut(){
+
+        return "logout-success";
+    }
+
+//    @PostMapping("/dologin")
     public String doLogin(@Valid LoginCommand loginCommand, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
             return "loginform";
         }
-        return "redirect:/";
+        return "redirect:index";
     }
 
 }
